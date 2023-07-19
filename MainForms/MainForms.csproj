@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6402AE16-DE6B-4661-B086-C5AB53E6AE06}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MainForms</RootNamespace>
+    <AssemblyName>MainForms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="M01_LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M01_LogIn.Designer.cs">
+      <DependentUpon>M01_LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M02_PWChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M02_PWChange.Designer.cs">
+      <DependentUpon>M02_PWChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M03_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M03_MainForm.Designer.cs">
+      <DependentUpon>M03_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="M01_LogIn.resx">
+      <DependentUpon>M01_LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M02_PWChange.resx">
+      <DependentUpon>M02_PWChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M03_MainForm.resx">
+      <DependentUpon>M03_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FormList\FormList.csproj">
+      <Project>{c5789b42-cae6-47c3-8d2b-dd347de5bfe6}</Project>
+      <Name>FormList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{9f86b3f1-c946-43d8-ba1b-2228b4e9dacf}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnSaveB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtcExit.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
